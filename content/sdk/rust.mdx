@@ -1,0 +1,9 @@
+---
+title: Rust
+---
+
+# Rust integration
+
+Depend on `nuvex-sdk` when you need PDA helpers in an off-chain Rust process. On-chain programs should depend on `nuvex-common` for seeds, not on the SDK.
+
+`prove_vrf` builds the alpha and returns a proof. `submit_request` still returns `SdkError::NotImplemented` because this client does not send transactions.

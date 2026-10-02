@@ -1,0 +1,9 @@
+---
+title: Slashing
+---
+
+# Slashing
+
+`slash` moves lamports from a node to `slash_destination`. The signer must be `slash_authority`. Both are set by `configure_stake`. If either is the default pubkey, slash is disabled.
+
+The amount is an argument and cannot exceed the locked stake. Slash works while the node is Active or Unstaking, including during the cooldown. It sets reputation to zero. If the stake reaches zero, the node returns to Registered. There is no automatic percentage and no evidence instruction. A failed VRF proof is rejected; it does not slash.

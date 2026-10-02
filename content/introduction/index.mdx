@@ -1,0 +1,11 @@
+---
+title: Introduction
+---
+
+# Introduction
+
+A caller submits `request(job_type, input, constraints, callback)`. The chain stores the request, assigned nodes fulfill it off-chain, and a program verifies the result before a callback.
+
+The chain does not fetch URLs, run models, or store node websites.
+
+A pending VRF request can be cancelled, expired, or fulfilled. Fulfillment checks a proof, an active node, the configured stake, and a fresh heartbeat. It can invoke a callback with no accounts. It does not move a fee or run a weighted draw.

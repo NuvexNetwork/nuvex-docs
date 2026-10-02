@@ -1,0 +1,11 @@
+---
+title: Staking
+---
+
+# Staking
+
+`configure_stake` sets `min_stake`, the unstake cooldown, and the heartbeat window. The cooldown and the window must each be from 1 to 150,000 slots. The registry authority chooses the numbers. They are not constants in the program.
+
+`stake` locks lamports in the node account. The node becomes Active when the locked amount reaches `min_stake`. A smaller deposit stays Registered. `unstake` locks the entire stake until `cooldown_end_slot`. `withdraw` returns that stake only after the slot has passed. A node cannot deposit again while unstaking.
+
+A configured minimum of zero does not resist Sybil. Fees are a separate question and are not charged here. The CLI `staking` command still exits with status 2. It does not send these instructions.

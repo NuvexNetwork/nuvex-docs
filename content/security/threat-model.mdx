@@ -1,0 +1,9 @@
+---
+title: Threat model
+---
+
+# Threat model
+
+The canonical write-up is `security/THREAT_MODEL.md`.
+
+Chain state is the authority. An API response that names a result is not a result. Milestone 0 makes that hard to misuse: protocol routes return 501, and the node reports `execution: disabled`.

@@ -1,0 +1,9 @@
+---
+title: Callbacks
+---
+
+# Callbacks
+
+A request stores a callback program and at most 128 bytes of callback data. The default pubkey means no callback.
+
+`fulfill` writes `CallbackExecuted`, then CPIs into that program with no accounts. The payload is the Anchor `callback` discriminator, the 64-byte output, a little-endian length, and the stored bytes. If the callee returns an error, the transaction reverts. There is no retry. ADR 0006 is the constraint record.

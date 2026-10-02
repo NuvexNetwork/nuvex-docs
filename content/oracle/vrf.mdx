@@ -1,0 +1,13 @@
+---
+title: VRF
+---
+
+# VRF
+
+VRF is the only job a caller can request. Fulfillment checks an ECVRF proof. It does not invent an output.
+
+The verifier is `solana-ecvrf` 0.0.1, RFC 9381 ECVRF-EDWARDS25519-SHA512-TAI. The proof is 80 bytes and the output is 64 bytes. No audit of that crate was found. ADR 0004 records the encoding, the alpha binding, and that absence.
+
+A node can fulfill only with a key it registered before the request, and only while it is active, staked at the configured minimum, and inside the heartbeat window. An operator who funds several keys can still choose among those outputs. The cost of each extra key is that minimum. A minimum of zero does not change the choice.
+
+Do not hash a signature and call it a VRF output.

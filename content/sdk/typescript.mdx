@@ -1,0 +1,9 @@
+---
+title: TypeScript
+---
+
+# TypeScript integration
+
+`@nuvex/sdk` exports `protocolPda`, `submitRequest`, `buildCallbackInstruction`, and `programIdsFromEnv`. `submitRequest` throws `SdkNotImplementedError`. `buildCallbackInstruction` returns the callback payload and does not send it. Host proving is in the Rust SDK.
+
+Program ids are read from `NUVEX_ORACLE_CORE_PROGRAM_ID`, `NUVEX_ORACLE_REGISTRY_PROGRAM_ID`, and `NUVEX_VERIFICATION_PROGRAM_ID`. Missing variables stay undefined. The SDK does not substitute the ids from `Anchor.toml`.

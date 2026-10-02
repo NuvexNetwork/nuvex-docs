@@ -1,0 +1,21 @@
+---
+title: Architecture
+---
+
+# Architecture
+
+Three programs:
+
+- oracle core, for requests, fees, and callbacks
+- oracle registry, for nodes, stake, heartbeats, and slash
+- verification, for proofs and later challenges
+
+Decision records live in `docs/architecture/adr/`. They are the source of truth:
+
+- `0001-core-architecture.md` — program split and the transition graph
+- `0002-account-model.md` — PDA seeds, authority, and rent
+- `0003-node-selection.md` — eligibility predicate for VRF fulfillment; no weighted draw
+- `0004-verification-model.md` — `solana-ecvrf` 0.0.1, with no audit found
+- `0005-fee-model.md` — fee roles; basis points are not chosen
+- `0006-callback-model.md` — callback with zero accounts
+- `0007-upgrade-model.md` — multisig upgrades; nothing is deployed
