@@ -4,6 +4,12 @@ title: Node installation
 
 # Node installation
 
-The node crate builds a `nuvex-node` binary. In Milestone 0 it serves `/health`, `/live`, `/ready`, and `/metrics`. `/ready` returns 503.
+The node crate builds a `nuvex-node` binary. It serves `/health`, `/live`, `/ready`, and `/metrics`. `/ready` returns 503.
 
 It does not load a key file and does not open an RPC connection. Docker compose does not start it unless you select the `node` profile, and that profile still only runs this health process.
+
+Build the image from the [protocol repository](https://github.com/NuvexNetwork/nuvex):
+
+```bash
+docker build -f node/Dockerfile -t nuvex-oracle-node:local .
+```

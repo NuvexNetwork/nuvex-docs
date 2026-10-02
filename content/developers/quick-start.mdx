@@ -4,12 +4,12 @@ title: Quick start
 
 # Quick start
 
-Install Rust stable, Solana CLI 4.1.2, Anchor CLI 1.2.0, Node.js 22, and pnpm 10.
+Install Rust stable, Solana CLI 4.1.2, Anchor CLI 1.2.0, Node.js 22, and pnpm 10 in the [protocol repository](https://github.com/NuvexNetwork/nuvex).
 
 ```bash
 make check
 ```
 
-In the protocol repository, `make check` runs host tests. It does not deploy. Copy `env/.env.local.example` to `.env.local` before setting a cluster URL. Leave secrets empty.
+`make check` runs host tests. It does not deploy. Copy `env/.env.local.example` to `.env.local` before setting a cluster URL. Leave secrets empty.
 
 Program ids in `Anchor.toml` are development ids. `make test` runs `cargo build-sbf` and then the LiteSVM lifecycle tests. Devnet and mainnet deploy scripts still exit before sending a transaction.

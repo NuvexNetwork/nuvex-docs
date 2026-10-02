@@ -2,14 +2,59 @@
 title: Nuvex
 ---
 
-# Nuvex
+# Nuvex documentation
+
+<span className="nuvex-status">Milestone 3</span>
 
 Nuvex is a Solana protocol for verifiable jobs: randomness first, then data, computation, and only later inference.
 
-This documentation matches Milestone 3. A VRF request can be opened, cancelled, expired, or fulfilled with an ECVRF proof by an active node that meets the configured stake and heartbeat. Fees and weighted node assignment are not implemented. If a page says a feature is absent, there is no hidden code path that implements it.
+A VRF request can be opened, cancelled, expired, or fulfilled with an ECVRF proof by an active node that meets the configured stake and heartbeat. Fees and weighted node assignment are not implemented. If a page says a feature is absent, there is no hidden code path that implements it.
 
-## Start here
+<div className="nuvex-home-grid">
+  <a className="nuvex-home-card" href="/introduction">
+    <strong>Introduction</strong>
+    <span>What a caller submits, and what the chain refuses to do.</span>
+  </a>
+  <a className="nuvex-home-card" href="/developers/quick-start">
+    <strong>Quick start</strong>
+    <span>Toolchain versions and `make check` in the protocol repository.</span>
+  </a>
+  <a className="nuvex-home-card" href="/oracle/vrf">
+    <strong>VRF</strong>
+    <span>The only live job: RFC 9381 proof, 80 bytes in, 64 bytes out.</span>
+  </a>
+  <a className="nuvex-home-card" href="/architecture">
+    <strong>Architecture</strong>
+    <span>Three programs and the decision records that bound them.</span>
+  </a>
+  <a className="nuvex-home-card" href="/sdk">
+    <strong>SDKs and CLI</strong>
+    <span>PDA helpers and host proofs. Nothing submits a transaction.</span>
+  </a>
+  <a className="nuvex-home-card" href="/security">
+    <strong>Security</strong>
+    <span>Threat model, no audit report, and how to report a finding.</span>
+  </a>
+</div>
 
-- [Introduction](/introduction)
-- [Architecture](/architecture)
-- [Quick start](/developers/quick-start)
+## What is live
+
+- On-chain VRF verification with `solana-ecvrf` 0.0.1
+- Registry stake, heartbeat, and the eligibility predicate
+- Cancel, expire, and VRF fulfill, including a callback with no accounts
+
+## What is not
+
+- Fees: `max_fee` is stored and never charged
+- Weighted node assignment
+- Price, data, compute, and inference jobs
+- A node process that submits transactions
+- Mainnet deployment
+
+## Repositories and sites
+
+- [nuvex.space](https://nuvex.space) · [docs.nuvex.space](https://docs.nuvex.space) · [X](https://x.com/nuvexnetwork)
+- [Protocol](https://github.com/NuvexNetwork/nuvex)
+- [Documentation source](https://github.com/NuvexNetwork/nuvex-docs)
+- [Website source](https://github.com/NuvexNetwork/nuvex-web)
+- [Services](https://github.com/NuvexNetwork/nuvex-services)

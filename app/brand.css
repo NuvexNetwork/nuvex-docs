@@ -1,0 +1,133 @@
+:root,
+.dark {
+  --nextra-primary-hue: 221deg;
+  --nextra-primary-saturation: 89%;
+  --nextra-primary-lightness: 55%;
+  --font-inter-tight: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+}
+
+html,
+body {
+  background: #000;
+  color: #e7e5e4;
+  font-family: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
+}
+
+.nuvex-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.nuvex-lockup img:first-child {
+  height: 2rem;
+  width: auto;
+}
+
+.nuvex-lockup img:last-child {
+  height: 0.9rem;
+  width: auto;
+}
+
+.nextra-navbar-blur {
+  background-color: #000 !important;
+  border-bottom-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.nextra-navbar {
+  color: #e7e5e4;
+}
+
+.nextra-navbar a,
+.nextra-navbar button {
+  color: inherit;
+}
+
+.nuvex-nav-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #e7e5e4;
+  text-decoration: none;
+}
+
+.nuvex-nav-link:hover {
+  color: #fff;
+}
+
+.nuvex-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.nuvex-footer p {
+  margin: 0;
+  color: #a8a29e;
+  font-size: 0.875rem;
+}
+
+.nuvex-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+}
+
+.nuvex-footer-links a {
+  color: #e7e5e4;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.nuvex-footer-links a:hover {
+  color: #fff;
+}
+
+.nuvex-home-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin: 1.25rem 0 2rem;
+}
+
+@media (min-width: 640px) {
+  .nuvex-home-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.nuvex-home-card {
+  display: block;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  background: #0a0a0a;
+}
+
+.nuvex-home-card:hover {
+  border-color: rgba(38, 95, 243, 0.55);
+}
+
+.nuvex-home-card strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #fff;
+}
+
+.nuvex-home-card span {
+  color: #a8a29e;
+  font-size: 0.9rem;
+}
+
+.nuvex-status {
+  display: inline-block;
+  margin: 0.25rem 0 1rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(38, 95, 243, 0.45);
+  color: #93b0ff;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+}

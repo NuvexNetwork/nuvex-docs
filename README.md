@@ -9,4 +9,4 @@ pnpm install
 pnpm dev
 ```
 
-The development server listens on port 3001.
+The development server listens on port 3001. The public site is https://docs.nuvex.space.
